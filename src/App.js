@@ -2,14 +2,12 @@ import React from 'react';
 import { HomePage } from './components/pages/homePage/homePage.component';
 import {  BrowserRouter, Switch, Route } from 'react-router-dom';
 
+import ShopePage from './components/pages/shopPage/shopPage.component';
+
 import './App.css';
 
 
-const CapPage = () => (
-  <div>
-    <h1>caps page </h1>
-  </div>
-);
+
 
 
 function App() {
@@ -18,7 +16,7 @@ function App() {
       <BrowserRouter>
         <Switch>
             <Route exact path='/' component={HomePage} />
-            <Route path='/caps' component={CapPage} />
+            <Route path='/shop' component={ShopePage} />
         </Switch>
       </BrowserRouter>
     </div>

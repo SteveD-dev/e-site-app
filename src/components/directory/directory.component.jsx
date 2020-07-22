@@ -4,7 +4,7 @@ import shoes from'../../images/shoes.jpg';
 import man from'../../images/man.jpg';
 import woman from'../../images/woman.jpg';
 import cap from'../../images/cap.jpg';
-import books from'../../images/books.jpg';
+import jacket from'../../images/jacket.jpg';
 
 
 
@@ -28,15 +28,15 @@ class Directory extends React.Component{
                 },
                 {
                     id: 2,
-                    title: "cap",
+                    title: "caps",
                     imageUrl: `${cap}`,
                     linkURL: "caps"
                     
                 },
                 {
                     id: 3,
-                    title: "books",
-                    imageUrl: `${books}`,
+                    title: "jackets",
+                    imageUrl: `${jacket}`,
                     linkURL: ""
                     
                 },
