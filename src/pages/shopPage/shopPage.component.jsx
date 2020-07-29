@@ -1,7 +1,6 @@
 import React from 'react';
-import SHOP_DATA from '../../../shop.data';
-import CollectionPrev from '../../collection-prev/collection-prev.component';
-
+import SHOP_DATA from '../../shop.data';
+import CollectionPrev from '../../components/collection-prev/collection-prev.component';
 
 
 
