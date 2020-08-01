@@ -9,8 +9,8 @@ import'./sign-in.styles.scss';
 
 
 class SignIn extends React.Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
 
         this.state = {
             email: '',
@@ -33,25 +33,25 @@ class SignIn extends React.Component {
     render(){
         return(
             <div className='sign-in'>
-                <h2>I alredy have an account</h2>
+                <h2 className='title'>I alredy have an account</h2>
                 <span>Sign in with your email and password</span>
 
                 <form onSubmit={this.handleSubmit}>
                     <FormInput 
                     name='email' 
-                    type="email" 
+                    type='email' 
                     value={this.state.email}
                     handleChange={this.handleChange} 
                     labelExist='Email'
                     required/>
 
                     <FormInput 
-                    name='password' 
+                    name='pwd' 
                     type='password' 
-                    value={this.state.pwd}  
-                    handleChange={this.handleChange}
-                    labelExist='Password' 
-                    required/>
+                    value={this.state.pwd}
+                    handleChange={this.handleChange} 
+                    labelExist='Password'
+                    required />
                     <div className='button'>
                         <CustomButton type='submit'> Sign in</CustomButton>
                         <CustomButton onClick={signInWithGoogle} isGoogleSign> Google</CustomButton>

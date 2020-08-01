@@ -4,7 +4,7 @@ import {  BrowserRouter, Switch, Route } from 'react-router-dom';
 import ShopePage from './pages/shopPage/shopPage.component';
 import Header from './components/header/header.component';
 import SignInAndSignUpPAge from './pages/sign-in-and-sign-up-page/sign-in-and-sign-up.component';
-import { auth } from './firebase/firebase.utils';
+import { auth, createUserProfileDoc } from './firebase/firebase.utils';
 
 import './App.css';
 
@@ -25,13 +25,27 @@ class App extends React.Component {
   userConnexion = null;
 // when user is connected
   componentDidMount(){
-    this.userConnexion = auth.onAuthStateChanged(user => {
-      this.setState({ currentUser: user});
-      console.log(user);
-    })
-  }
+    this.userConnexion = auth.onAuthStateChanged(async userAuth => {
+     if(userAuth){ 
+       const userRef = await createUserProfileDoc(userAuth);
+
+       userRef.onSnapshot(snap => {
+         this.setState({
+           currentUser:{
+             id: snap.id,
+             ...snap.data()
+           }
+         });
+
+         console.log(this.state);
+       } );
+    }
+    this.setState({currentUser: userAuth});
+   
+  })
+}
 // when user is not connected after sign out
-  componentWillUnount(){
+  componentWillUnount() {
     this.userConnexion();
   }
 
