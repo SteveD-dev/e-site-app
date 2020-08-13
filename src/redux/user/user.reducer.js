@@ -9,7 +9,8 @@ const userReducer = (state = INITIAL_STATE, action) => {
         case UserActionType.SET_CURRENT_USER:
             return {
                 ...state,
-                currentUser: action.payload
+                currentUser: action.payload,
+                mother: 'lolololololo'
             }
         default:
             return state;
