@@ -44,10 +44,16 @@ const Header = ({currentUser, hidden})=> (
 //currentUser key is the currentUser arg in header component
 // .currentUser coming from user.reducer.js
 
+// we can also write it like this
+// const mapStateToProps = state => ({
+//     currentUser: state.user.currentUser,
+//     hidden: state.cart.hidden
+ 
+//  }); or
+
 const mapStateToProps = ({user: { currentUser}, cart: { hidden}}) => ({
    currentUser,
    hidden
-  
 
 });
 
