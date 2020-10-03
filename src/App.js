@@ -1,5 +1,5 @@
 import React from 'react';
-import {  BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import {  Switch, Route, Redirect } from 'react-router-dom';
 import { connect} from 'react-redux';
 
 import { auth, createUserProfileDoc } from './firebase/firebase.utils';
@@ -52,7 +52,7 @@ class App extends React.Component {
   render(){
     return (
       <div>
-        <BrowserRouter>
+
           <Header />
           <Switch>
               <Route exact path='/' component={HomePage} />
@@ -63,7 +63,7 @@ class App extends React.Component {
               
             } />
           </Switch>
-        </BrowserRouter>
+
       </div>
     );
     }

@@ -10,7 +10,6 @@ const userReducer = (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 currentUser: action.payload,
-                mother: 'lolololololo'
             }
         default:
             return state;
