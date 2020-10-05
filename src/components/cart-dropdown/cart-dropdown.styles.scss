@@ -10,6 +10,12 @@
     top: 90px;
     right: 40px;
     z-index: 5;
+
+    .empty-cart {
+      font-size: 20px;
+      margin: 120px auto 0px;
+      color: rgba(49, 49, 49, 0.842)
+    }
   
     .cart-items {
       height: 240px;
