@@ -10,7 +10,7 @@ const INITIAL_STATE = {
             id: 1,
             title: "shoes",
             imageUrl: `${shoes}`,
-            linkURL: ""
+            linkURL: "shop/sneakers"
            
             
         },
@@ -18,14 +18,14 @@ const INITIAL_STATE = {
             id: 2,
             title: "caps",
             imageUrl: `${cap}`,
-            linkURL: "caps"
+            linkURL: "shop/hats"
             
         },
         {
             id: 3,
             title: "jackets",
             imageUrl: `${jacket}`,
-            linkURL: ""
+            linkURL: "shop/jackets"
             
         },
         {
@@ -33,7 +33,7 @@ const INITIAL_STATE = {
             title: "women",
             imageUrl: `${woman}`,
             size: 'large',
-            linkURL: ""
+            linkURL: "shop/women"
 
         },
         {
@@ -41,7 +41,7 @@ const INITIAL_STATE = {
             title: "men",
             imageUrl: `${man}`,
             size: 'large',
-            linkURL: ""
+            linkURL: "shop/mens"
         }
     ]
 }
