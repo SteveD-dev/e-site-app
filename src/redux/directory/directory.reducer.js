@@ -4,6 +4,7 @@ import woman from'../../images/woman.jpg';
 import cap from'../../images/cap.jpg';
 import jacket from'../../images/jacket.jpg';
 
+
 const INITIAL_STATE = {
     sections:[
         {
